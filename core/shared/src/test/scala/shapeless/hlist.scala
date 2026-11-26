@@ -404,6 +404,9 @@ class HListTests {
     val al = a :: HNil
     val ral = al.reverse
     assertTypedEquals[Apple :: HNil](a :: HNil, ral)
+
+    assertTypedEquals[HNil](HNil, HNil.reverse)
+    assertTypedEquals[APBP](apbp, apbp.reverse.reverse)
   }
 
   @Test
